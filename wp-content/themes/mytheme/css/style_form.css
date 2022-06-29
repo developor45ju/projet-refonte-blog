@@ -1,0 +1,57 @@
+.page-template-tpl-login-php {
+    display: flex;
+    justify-content: center;
+}
+/* Formulaire administrateur */
+.form-connection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25%);
+    gap: 3em 0;
+    width: min-content;
+    height: 35em;
+    padding: 1em 2em;
+    background-color: #eef5ed;
+}
+.logo-couronnerie-form {
+    position: absolute;
+    top: 3em;
+    height: 12em;
+    width: auto;
+}
+.user-login, .user-password {
+    display: block;
+    border: none;
+    background-color: #D2D2D2;
+    height: auto;
+    width: max-content;
+    padding: .9em;  
+    border-radius: 50px;
+}
+label[for='user_login'], label[for='user_password'] {
+    width: inherit;
+}
+label[for='rememberme'] {
+    display: flex;
+    align-items: center;
+}
+.user-submit {
+    background-color: #177DF6;
+    border-radius: 50px;
+    padding: .5em 2.5em;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    font-size: 48px;
+}
+.user-submit:active {
+    box-shadow: inset 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+/* Champ de connexion invalide */
+.login-failed {
+    color: red;
+}

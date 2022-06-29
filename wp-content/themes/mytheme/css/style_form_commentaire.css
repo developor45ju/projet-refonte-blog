@@ -1,0 +1,49 @@
+.form-commentaires {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    height: calc(30vh + 10em);
+}
+.groupe-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+}
+.champ-commentaire {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    resize: none;
+    border-radius: 50px;
+    border: 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .25);
+    width: 75%;
+}
+.casse-cocher {
+    display: flex;
+    align-items: center;
+}
+.form-commentaire-champ {
+    border: 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .25);
+    border-radius: 50px;
+    padding: 1em;
+}
+.button-envoyé {
+    width: 10em;
+    height: 5em;
+    background-color: blue;
+    border: none;
+    box-shadow: 5px 5px 1em rgba(0, 0, 0, .25);
+    border-radius: 50px;
+    color: white;
+}
+.button-envoyé:hover {
+    box-shadow: inset 5px 5px 1em rgba(0, 0, 0, .25);
+}
+.form-submit {
+    display: flex;
+    justify-content: center;
+}
