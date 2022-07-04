@@ -1,4 +1,7 @@
 <?php
+
+add_action('after_setup_theme', 'montheme_setup');
+
     if(!function_exists('montheme_setup')):
         /*
         *
@@ -6,6 +9,7 @@
         *@since MonTheme 0.1
         *
         */
+        
         
         function montheme_setup() {
             add_theme_support( 'automatic-feed-links' );
@@ -16,7 +20,7 @@
                 'flex-width' => true,
                 'flex-height' => true,
             ));
-
+            
             register_sidebar(array(
                 "id" => "primary",
                 "name" => __('Primary Sidebar'),
@@ -25,7 +29,7 @@
                 "before_title" => "<p class='sidebar-widget-title'>",
                 "after_title" => "</p>"
             ));
-
+            
             add_theme_support( 'post-thumbnails');
             add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video' ));
             add_theme_support( 'editor-color-palette', [
@@ -35,6 +39,8 @@
 	        ]);
         }
     endif;
+
+    add_action('wp_enqueue_scripts', 'montheme_style_and_script');
 
     function montheme_style_and_script() {
         wp_enqueue_style('montheme_style1', get_template_directory_uri() . '/css/style.css');
@@ -70,6 +76,4 @@
         }
     }
 
-    add_action('after_setup_theme', 'montheme_setup');
-    add_action('wp_enqueue_scripts', 'montheme_style_and_script');
     add_filter('show_admin_bar', '__return_false');

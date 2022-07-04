@@ -1,9 +1,12 @@
-.page-template-tpl-login-php {
+
+.page-template-tpl-login {
+    height: 100%;
     display: flex;
     justify-content: center;
 }
 /* Formulaire administrateur */
 .form-connection {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -19,7 +22,7 @@
 }
 .logo-couronnerie-form {
     position: absolute;
-    top: 3em;
+    top: -5em;
     height: 12em;
     width: auto;
 }

@@ -1,11 +1,16 @@
 /* Initialise à 0 les marges extèrieurs de body et html */
+.search {
+    height: 100%;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin: 0;
     padding: 1rem;
-    height: 100%;
     background-color: #d9aa45;
 }
 /* L'en-tête de la page */
@@ -20,6 +25,13 @@ body {
 }
 .header img {
     width: 15em;
+}
+/* Menu hamburger */
+.menu-hamburger * {
+    display: none;
+    height: .5em;
+    width: 3em;
+    background-color: #CCC;
 }
 /* Nom + géré par l'établissement */
 .titre-blog {
@@ -86,13 +98,6 @@ body {
     text-decoration: none;
     box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
-.search-field:active {
-    border-color: none;
-}
-.search-field:invalid {
-    border-color: red;
-    
-}
 /* Section avec les articles et la barre latérale */
 .contenu-page {
     display: flex;
@@ -140,9 +145,7 @@ body {
 .sidebar {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 20%;
-    height: 40em;
 }
 .widget_block {
     border-radius: 1em;
@@ -160,11 +163,6 @@ body {
     list-style-type: none;
     padding-left: 0;
 }
-.title-href {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: blue;
-}
 .content-post {
     grid-column: 2;
 }
@@ -176,32 +174,6 @@ body {
 /* Alignement du copyright */
 .copyright-year {
     text-align: center;
-}
-/* Indication dans quelle catégorie vous êtes */
-.indicator-category {
-    display: flex;
-}
-.indicator-category li {
-    list-style-type: none;
-    text-decoration: none;
-    color: black;
-    justify-items: flex-start;
-}
-/* Formulaire de commentaire */
-.espace-commentaire {
-    display: flex;
-    justify-content: flex-start;
-    align-content: flex-start;
-    flex-direction: column;
-}
-.comment {
-    resize: none;
-    border-radius: 50px;
-    border: none;
-    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.25);
-    padding: .5em 2em;
-    height: 5em;
-    overflow-y: hidden;
 }
 /* Pagination entre les pages */
 .pagination {
@@ -246,14 +218,34 @@ body {
     .sidebar {
         display: none;
     }
-    .header {
-        display: flex;
-        align-items: center;
-    }
     .titre-blog {
         position: initial;
     }
+    .menu-hamburger {
+        position: absolute;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        gap: .5em 0;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .menu-hamburger * {
+        display: flex;
+    }
+    .nav-bar {
+        display: none;
+    }
     .liste-cartes {
-        width: inherit;
+        width: 100%;
+    }
+    .toggle {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 85%;
+        background: rgba(0, 0, 0, 0.25);
+        padding-left: 100%;
     }
 }

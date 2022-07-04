@@ -11,7 +11,9 @@
             <div class='article'>
                 <h1 class='titre-article'><a href=<?= the_permalink(); ?>><?php the_title(); ?></a></h1>
                 <?php the_content(); ?>
-                <?php comments_template('/comments.php'); ?>
+                <?php if(comments_open() || get_comments_number()):
+                    comments_template();
+                endif ?> 
             </div>
         </div>
     </div>

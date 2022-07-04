@@ -1,4 +1,8 @@
 // Initialisation de varibles
 
-let mobile = document.getElementById("#sidebar");
-print(mobile);
+let sidebarMobile = document.getElementById('sidebar');
+let toggleBlock = document.getElementById('menu-hamburger');
+
+toggleBlock.addEventListener('click', function () {
+    sidebarMobile.classList.toggle('toggle');
+})
