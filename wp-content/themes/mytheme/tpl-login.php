@@ -12,6 +12,7 @@
 
 <?php get_header(); ?>
 
+<!-- Formulaire de connexion -->
 
 <form action="<?= home_url()  . '/wp-login'; ?>" method="post" class="form-connection">
     <img src="<?= get_template_directory_uri() . '/images/logo_couronnerie.png'; ?>" alt="Logo de du CFPERM la Couronnerie" class="logo-couronnerie-form" />

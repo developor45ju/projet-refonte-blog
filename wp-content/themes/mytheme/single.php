@@ -10,8 +10,12 @@
             </div>
             <div class='article'>
                 <h1 class='titre-article'><a href=<?= the_permalink(); ?>><?php the_title(); ?></a></h1>
-                <?php the_content(); ?>
-                <?php if(comments_open() || get_comments_number()):
+                <?php                
+                the_content();
+
+                // Si il y a des commentaire
+
+                if(comments_open() || get_comments_number()):
                     comments_template();
                 endif ?> 
             </div>

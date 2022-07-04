@@ -1,18 +1,35 @@
 <?php
+
+    // Initialisation de variables 
+
     $s=get_search_query();
     $args = array(
         's' =>$s
     );
-    $the_query = new WP_Query( $args );
+    $the_query = new WP_Query($args); // Capture les recherches selon ce que tappe le visiteur dans la barre de recherche
 ?>
+
 <?php get_header(); ?>
+
 <div class='contenu-page'>
     <div class='liste-cartes'>
+
+        <!-- Voir ce que tappe le visiteur si il y a des articles -->
+
         <?php if($the_query->have_posts()): ?>
             <?php if($s == '') {
+
+                // Ne retourne rien
+
             } else {
+
+                // Retoune une phrase
+
                 echo '<h2>Vous avez recherché ' . get_query_var('s') . '</h2>';
             } ?>
+
+            <!-- Parcours les articles de la recherche -->
+
             <?php while($the_query->have_posts()):
                 $the_query->the_post();
             ?>
@@ -34,4 +51,5 @@
     </div>
     <?php get_sidebar(); ?>
 </div>
+
 <?php get_footer(); ?>

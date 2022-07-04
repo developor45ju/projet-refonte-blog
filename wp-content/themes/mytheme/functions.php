@@ -1,5 +1,7 @@
 <?php
 
+// Ajoute une action après l'activation du thème 
+
 add_action('after_setup_theme', 'montheme_setup');
 
     if(!function_exists('montheme_setup')):
@@ -40,6 +42,8 @@ add_action('after_setup_theme', 'montheme_setup');
         }
     endif;
 
+    // Ajoute une action après les association de fichiers de styles ou de scripts
+
     add_action('wp_enqueue_scripts', 'montheme_style_and_script');
 
     function montheme_style_and_script() {
@@ -49,6 +53,8 @@ add_action('after_setup_theme', 'montheme_setup');
         wp_enqueue_style('montheme_style4', get_template_directory_uri() . '/css/style_form_commentaire.css');
         wp_enqueue_script('montheme_script', get_template_directory_uri() . '/js/main.js', [], false, true);
     }
+
+    // Ajoute une action après les erreurs de connexions
 
     add_action( 'wp_authenticate', '_catch_empty_user', 1, 2 );
 
@@ -66,14 +72,18 @@ add_action('after_setup_theme', 'montheme_setup');
         }
     }
 
-    add_action( 'wp_login_failed', 'pippin_login_fail' );  // hook failed login
+    // Ajoute une action si l'identifiant et le mot de passe ne correspond pas
+
+    add_action( 'wp_login_failed', 'pippin_login_fail' );
+
     function pippin_login_fail( $username ) {
-        $referrer = $_SERVER['HTTP_REFERER'];  // where did the post submission come from?
-        // if there's a valid referrer, and it's not the default log-in screen
+        $referrer = $_SERVER['HTTP_REFERER'];
         if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
-            wp_redirect(home_url() . '/login/?login=failed' );  // let's append some information (login=failed) to the URL for the theme to use
+            wp_redirect(home_url() . '/login/?login=failed' );
             exit;
         }
     }
+
+    // Ajoute un filtres qui enlève la bar d'administration quand on s'identifie
 
     add_filter('show_admin_bar', '__return_false');
