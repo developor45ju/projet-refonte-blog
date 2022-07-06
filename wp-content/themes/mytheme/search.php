@@ -52,4 +52,13 @@
     <?php get_sidebar(); ?>
 </div>
 
+<div class="pagination">
+    <div class="page-precedente">
+        <?php previous_posts_link('Page précédente'); ?>
+    </div>
+    <div class="page-suivante">
+        <?php next_posts_link('Page suivante'); ?>
+    </div>
+</div>
+
 <?php get_footer(); ?>

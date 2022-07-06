@@ -42,6 +42,7 @@
             <div class="titre-blog" id="titre-blog">
                 CFPERM <br />
                 Un blog géré par l'établissement
+                <a href="https://apirjso-couronnerie.fr/" class="lien-asso">Aller au site de l'association</a>
             </div>
             <div class="menu-hamburger" id="menu-hamburger">
                 <div></div>
