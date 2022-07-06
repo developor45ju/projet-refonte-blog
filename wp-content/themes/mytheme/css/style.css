@@ -169,9 +169,6 @@ body {
 .wp-block-latest-posts__post-title:nth-child(even) {
     color: #45b37a;
 }
-.wp-block-latest-posts__post-title:nth-child(odd) {
-    color: #41c0be;
-}
 .wp-block-latest-posts__post-title:visited {
     color: black;
 }
@@ -187,16 +184,13 @@ body {
     list-style-type: none;
     padding-left: 0;
 }
-.wp-block-categories a:nth-child(even), .wp-block-archives a:nth-child(even) {
-    color: #f8be34;
+.wp-block-categories a, .wp-block-archives a {
+    color: #ef4e2b
 }
-.wp-block-categories a:nth-child(odd), .wp-block-archives a:nth-child(odd) {
-    color: #ef4e2b;
-}
-.wp-block-categories:visited, .wp-block-archives:visited {
+.wp-block-categories a:visited, .wp-block-archives a:visited {
     color: black;
 }
-.wp-block-categories:hover, .wp-block-archives:hover {
+.wp-block-categories a:hover, .wp-block-archives a:hover {
     color: #41c0be;
 }
 .content-post {
