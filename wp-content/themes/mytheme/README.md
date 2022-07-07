@@ -25,29 +25,43 @@ J'ai vu avec le responsable de la communication si je peux faire un stage pour f
 
 Je n'avais pas de contraintes pour les choix techniques mais j'ai choisi les languages:
 
-![HTML](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/50px-HTML5_logo_and_wordmark.svg.png)
+<div style="display: flex; text-wrap: wrap;">
+<div>
+    <img src="images/logo_html.png" alt="Logo HTML" width="100" width="100">
 
 pour la structures des pages
+</div>
 
-![CSS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/50px-CSS3_logo_and_wordmark.svg.png)
+<div>
+    <img src="images/logo_css.png" alt="Logo CSS" height="100" width="100" />
 
 pour la mise en forme des pages
+</div>
 
-![JS](https://www2.skillsoft.com/wp-content/uploads/2018/01/Javascript_badge.png)
+<div>
+    <img src="images/logo_js.png" alt="Logo JS" height="100" width="100">
 
 pour le menu hamburger et
+</div>
 
-![WAMPSERVER](https://upload.wikimedia.org/wikipedia/commons/f/f8/WampServer-logo.png)
+<div>
+    <img src="images/logo_wamp.png" alt="Logo wamp serveur">
 
 pour le serveur en local
+</div>
 
-![Figma](https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg)
+<div>
+    <img src="images/logo_figma.svg" alt="Logo Figma" height="100" width="100">
 
 pour le maquetage et le prototypage
+</div>
 
-![PHP](https://www.agence-e.fr/media/uploads/zinnia/2017/11/29/arton67.png)
+<div>
+    <img src="images/logo_php.png" alt="Logo PHP" height="100" width="100">
 
 pour les données des page
+</div>
+</div>
 
 ### Processus
 
@@ -67,4 +81,8 @@ Le client m'a demmandé de faire ça avec WordPress car il héberge chez eux. Le
 ### Mes difficultés
 
 J'avais des difficultés au niveau du fonctionnement WordPress, des templates et de trouver une solution au problème quand j'étais bloqué.
+
+### Conclusion 
+
+J'ai bien aimé faire un thème avec WordPress. Ça m'a permis de découvrir de travailler avec un **CMS** pour Content Magement System et de monter en compétences.
 
